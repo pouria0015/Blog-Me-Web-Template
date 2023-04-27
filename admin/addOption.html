@@ -45,15 +45,14 @@
     </header>
     <!-- end header  -->
 
-
-    <!-- section add project  -->
+    <!-- section add option  -->
     <div class="d-flex justify-content-center">
         <div class="row row-cols-1 row-cols-md-1 g-1">
 
             <div class="card mx-auto m-5">
                 <div class="card-body">
-                    <h5 class="card-title"> اضافه کردن پروژه جدید </h5>
-                    <p> پروژه مورد نظر خود را اضافه کنید </p>
+                    <h5 class="card-title"> اضافه کردن مهارت جدید </h5>
+                    <p> مهارت مورد نظر خود را اضافه کنید </p>
                     <form method="POST">
 
                         <div class="mb-3">
@@ -63,27 +62,13 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="exampleInputLinkAddress" class="form-label"> پیوند اینترنتی پروژه را وارد کنید
-                            </label>
-                            <input name="link" type="url" class="form-control" id="exampleInputLinkAddress"
-                                aria-describedby="emailHelp" required>
+                            <label for="rang"> میزان تسلط </label>
+                            <input type="range" value="0" min="1" max="100" oninput="this.nextElementSibling.value =
+                            this.value">
+                            <output>0</output>
                         </div>
 
-                        <div class="mb-3">
-                            <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label"> متن پروژه را بنویسید
-                                </label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
-                        </div>
-
-
-                        <div class="mb-3">
-                            <label for="formFileMultiple" class="form-label"> تصویر پروژه </label>
-                            <input class="form-control" type="file" id="formFileMultiple" multiple>
-                        </div>
-
-                        <button name="login" type="submit" class="btn btn-primary"> اضافه کردن پروژه </button>
+                        <button name="login" type="submit" class="btn btn-primary"> اضافه کردن مهارت </button>
                     </form>
                 </div>
             </div>
