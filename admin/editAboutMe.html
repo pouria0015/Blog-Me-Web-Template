@@ -44,34 +44,38 @@
 
     </header>
     <!-- end header  -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
 
-    <!-- section add option  -->
-    <div class="d-flex justify-content-center">
-        <div class="row row-cols-1 row-cols-md-1 g-1">
 
-            <div class="card mx-auto m-5">
-                <div class="card-body">
-                    <h5 class="card-title"> اضافه کردن مهارت جدید </h5>
-                    <p> مهارت مورد نظر خود را اضافه کنید </p>
-                    <form method="POST">
+  <!-- section add project  -->
+  <div class="d-flex justify-content-center">
+    <div class="row row-cols-1 row-cols-md-1 g-1">
 
+        <div class="card m-5">
+            <div class="card-body">
+                <h5 class="card-title"> ویرایش قسمت درباره من </h5>
+                <form method="POST">
                         <div class="mb-3">
-                            <label for="exampleInputUsername" class="form-label"> عنوان </label>
-                            <input name="username" type="text" class="form-control" id="exampleInputUsername"
-                                aria-describedby="emailHelp" required>
+                            <label for="editor" class="form-label"> متن درباره من را بنویسید
+                            </label>
+                            <textarea class="form-control" id="editor"></textarea>
                         </div>
+                    </div>
 
-                        <div class="mb-3">
-                            <label for="rang"> میزان تسلط </label>
-                            <input type="range" value="0" min="1" max="100" oninput="this.nextElementSibling.value =
-                            this.value">
-                            <output>0</output>
-                        </div>
-
-                        <button name="login" type="submit" class="btn btn-primary"> اضافه کردن مهارت </button>
-                    </form>
-                </div>
+                    <button name="login" type="submit" class="btn btn-primary"> ویرایش </button>
+                </form>
             </div>
-
         </div>
+
     </div>
+</div>
+
+
+
+<script>
+    ClassicEditor
+      .create( document.querySelector( '#editor' ) )
+      .catch( error => {
+          console.error( error );
+      } );
+  </script>
